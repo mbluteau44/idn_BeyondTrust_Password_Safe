@@ -80,9 +80,16 @@ In order to take advantage of new UI elements in IdentityNow to show Parent-Chil
 
   Now we are ready to Import data. From the Source in IdentityNow, navigate to Account Aggregation and Entitlement Aggregation and Start the Manual Aggregations.
   
-   <img src="assets/images/HierarchyAttribute-2.png" alt="PUT Group Schema with CONNECTOR_SCHEMA id">
+   <img src="assets/images/Aggregation-Accounts.png" alt="Aggregation - Accounts">
 
-  
+   <img src="assets/images/Aggregation-Accounts.png" alt="Aggregation - Accounts">
+
+And with the optional Parent-Child Entitlements steps, we should be able to see the relationships between Groups and Containers:
+
+   <img src="assets/images/Child-Entitlements.png" alt="Child Entitlements">
+
+To be continued...
+
 
   </body>
   </html>
