@@ -52,8 +52,37 @@ Once the Password Safe SaaS Connector has been added to our IdentityNow instance
   At this point, you should be able to successfully test the connection.
   
    <img src="assets/images/CreateSource-TestConnection.png" alt="Create Source: Test Connection">
+
+ Before we import data, we want to configure a Correlation rule.
+
+    <img src="assets/images/Correlation.png" alt="Correlation Rule">
+
   
-  Click Configure Source, provide a Name and Description, then click Continue.
+  <h3>IdentityNow API Step: Parent-Child Entitlements</h3>
+
+Note: This step is optional.
+  
+In order to take advantage of new UI elements in IdentityNow to show Parent-Child relationships between entitlements(Group = Parent, Container = Child) we need to modify the Source Schemas.  This is necessary with the current version of SaaS Connectivity, which does not support configuring Parent-Child relationships via connector-spec.json.
+
+  Step 1: In IdentityNow, click your account name in the upper right corner, then select Preferences.
+  Step 2: Select Personal Access Token, and create a new Access Token. Add scopes/permissions including idn:connector-config:manage.
+  Step 3: Use Postman to authenticate to the IdentityNow v3 API, and use /v3/sources to find your Source id.
+  Step 4: Access your source id with /v3/source/{id} and find the id for the group CONNECTOR_SCHEMA.
+  Step 5: Use GET /v3/sources/{source_id}/schemas/{group_id} and copy the response in body.
+
+   <img src="assets/images/Hierarchy-GetGroupSchema.png" alt="GET Group Schema with CONNECTOR_SCHEMA id">
+  
+  Step 6: Use PUT /v3/sources/{source_id}/schemas/{group_id} with the following 2 modifications to body(replace {group_id}:
+
+   <img src="assets/images/HierarchyAttribute-1.png" alt="PUT Group Schema with CONNECTOR_SCHEMA id">
+
+   <img src="assets/images/HierarchyAttribute-2.png" alt="PUT Group Schema with CONNECTOR_SCHEMA id">
+
+  Now we are ready to Import data. From the Source in IdentityNow, navigate to Account Aggregation and Entitlement Aggregation and Start the Manual Aggregations.
+  
+   <img src="assets/images/HierarchyAttribute-2.png" alt="PUT Group Schema with CONNECTOR_SCHEMA id">
+
+  
 
   </body>
   </html>
