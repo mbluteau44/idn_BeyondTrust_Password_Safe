@@ -55,7 +55,7 @@ Once the Password Safe SaaS Connector has been added to our IdentityNow instance
 
  Before we import data, we want to configure a Correlation rule.
 
-    <img src="assets/images/Correlation.png" alt="Correlation Rule">
+   <img src="assets/images/Correlation.png" alt="Correlation">
 
   
   <h3>IdentityNow API Step: Parent-Child Entitlements</h3>
