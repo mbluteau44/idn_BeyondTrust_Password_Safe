@@ -82,7 +82,9 @@ In order to take advantage of new UI elements in IdentityNow to show Parent-Chil
   
    <img src="assets/images/Aggregation-Accounts.png" alt="Aggregation - Accounts">
 
-   <img src="assets/images/Aggregation-Accounts.png" alt="Aggregation - Accounts">
+   <img src="assets/images/Aggregation-Entitlements.png" alt="Aggregation - Entitlements">
+
+   <img src="assets/images/Entitlement-Group-Details.png" alt="Group Entitlement - Details">
 
 And with the optional Parent-Child Entitlements steps, we should be able to see the relationships between Groups and Containers:
 
