@@ -17,17 +17,16 @@
 
 <h3>Supported Use Cases</h3>
 
-Account Create
-Account Delete
-Account Enable
-Account Disable
-Account List
-Account Read
-Account Unlock
-Account Update
-Entitlement List
-Entitlement Read
-Test Connection
+- Account Create
+- Account Delete
+- Account Enable
+- Account Disable
+- Account List
+- Account Read
+- Account Update
+- Entitlement List
+- Entitlement Read
+- Test Connection
 
 <h3>Requirements</h3>
 
@@ -41,7 +40,20 @@ Once the Password Safe SaaS Connector has been added to our IdentityNow instance
 
    <img src="assets/images/CreateSource.png" alt="Create Source: BeyondTrust-Password_Safe">
   
-  PM Cloud web console Users can be added to Roles & Resources via Edit User.
+  Click Configure Source, provide a Name and Description, then click Continue.
+
+   <img src="assets/images/CreateSource-Name.png" alt="Create Source: BeyondTrust-Password_Safe">
+  
+  Provide the Base URL and Authentication URL for your Password Safe Cloud instance. Also provide Client ID and Secret for the SCIM service account.
+  For more information on creating the IdentityNow SCIM service account, refer to <a href="https://www.beyondtrust.com/docs/beyondinsight-password-safe/bi/integrations/third-party/identity-now.htm">Create Group and Account</a>
+
+   <img src="assets/images/CreateSource-Configuration.png" alt="Create Source: Configuration">
+  
+  At this point, you should be able to successfully test the connection.
+  
+   <img src="assets/images/CreateSource-TestConnection.png" alt="Create Source: Test Connection">
+  
+  Click Configure Source, provide a Name and Description, then click Continue.
 
   </body>
   </html>
