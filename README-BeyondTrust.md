@@ -90,7 +90,46 @@ And with the optional Parent-Child Entitlements steps, we should be able to see 
 
    <img src="assets/images/Child-Entitlements.png" alt="Child Entitlements">
 
-To be continued...
+<h2>Parent and Child Entitlements</h2>
+
+With the optional API Step above, we can start to display the relationships between Parent and Child Entitlements for the SCIM PAM Schemas: Groups and associated Containers.
+We can also see the PrivilegedData items associated to a Container, which are individual Managed Accounts when it comes to Password Safe.
+
+   <img src="assets/images/Group-SCIM-Service-Accounts.png" alt="Example Group: SCIM Service Accounts">
+
+   <img src="assets/images/Group-SCIM-Service-Accounts-Containers.png" alt="Example Group: Containers">
+
+   <img src="assets/images/Container-Linux-Managed-Accounts.png" alt="Example Container">
+
+   <img src="assets/images/Container-Linux-Managed-Accounts-Parents.png" alt="Example Container: Parents">
+
+<h2>Smart Error Handling</h2>
+
+Because the last thing we want is for an Axios error to pop up within IdentityNow, we need to catch common errors and substitute confusing HTTP error codes and messages with more informative messages. The goal is to try to help the SaaS Connector administrator overcome the error condition with helpful instructions, while potentially eliminating the need to create a Support Ticket.
+
+If we provide invalid Client Credentials, for example by adding an extra character to Client ID via Configuration, Axios normally relays HTTP error 400.  For Password Safe, this is related to invalid Client Credentials.
+
+   <img src="assets/images/SmartError-badClientID.png" alt="Smart Error Handling: Invalid Client Credentials">
+
+Now, if we have an invalid Path for the Authentication URL in Configuration:
+
+   <img src="assets/images/SmartError-InvalidAuthUrl.png" alt="Smart Error Handling: Invalid Authentication URL">
+
+Invalid host within the Authentication URL:
+
+   <img src="assets/images/SmartError-InvalidHost.png" alt="Smart Error Handling: Invalid Host">
+
+Now a more complex situation is one in which a Feature Permission is missing for the SCIM service account Group in Password Safe. If we remove the User Accounts Management Feature for the Group, and try to Aggregate Accounts, this is the Smart Error we get:
+
+   <img src="assets/images/SmartError-MissingPermission.png" alt="Smart Error Handling: Missing Feature Permission">
+
+The customized Smart Error messages are specific to the Source, here Password Safe. They can be edited within the scim-functions.ts file.
+
+   <img src="assets/images/SmartErrorHandling.png" alt="Smart Error Handling: Custom messages">
+
+<h2>Unit Testing with Postman collection</h2>
+
+A Postman collection is included at the root of the github repo to allow for Unit Testing of capabilities.
 
 
   </body>
