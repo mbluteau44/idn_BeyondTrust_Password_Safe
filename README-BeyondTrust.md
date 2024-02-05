@@ -157,7 +157,7 @@ Account Create:
 
 Account Create - Import from Active Directory:
 
-   <img src="assets/images/Postman-AccountCreate-Import.png" alt="Account Create - Import from Active Directory">
+   <img src="assets/images/Postman-AccountCreate-ADImport.png" alt="Account Create - Import from Active Directory">
 
 Account Delete:
 
