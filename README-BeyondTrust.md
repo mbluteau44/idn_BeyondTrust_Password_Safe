@@ -131,6 +131,13 @@ The customized Smart Error messages are specific to the Source, here Password Sa
 
 A Postman collection is included at the root of the github repo to allow for Unit Testing of capabilities.
 
+We need to provide Variables for the collection:
+
+   <img src="assets/images/Postman-Vars.png" alt="Postman collection: Variables">
+
+Test Connection:
+
+   <img src="assets/images/Postman-TestConnection.png" alt="Test Connection">
 
   </body>
   </html>
