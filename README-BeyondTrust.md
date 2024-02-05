@@ -103,6 +103,13 @@ We can also see the PrivilegedData items associated to a Container, which are in
 
    <img src="assets/images/Container-Linux-Managed-Accounts-Parents.png" alt="Example Container: Parents">
 
+<h2>Provisioning Strategies</h2>
+
+Password Safe supports different provisioning strategies:
+  - Local Account: Access Profile include Password Safe Entitlement(Group)
+  - Import Active Directory Account: Access Profile includes Password Safe Entitlement(Group). Source and nativeIdentifier attributes needed in Provisioning Policy.
+  - Active Directory or Azure AD(Entra ID) Account and Group: Access Profile includes AD or AAD Entitlement(Group) Synchronized by Password Safe.
+
 <h2>Smart Error Handling</h2>
 
 Because the last thing we want is for an Axios error to pop up within IdentityNow, we need to catch common errors and substitute confusing HTTP error codes and messages with more informative messages. The goal is to try to help the SaaS Connector administrator overcome the error condition with helpful instructions, while potentially eliminating the need to create a Support Ticket.
